@@ -98,7 +98,7 @@ a { text-decoration: none; }
 
 .article-title { margin: 0; font-weight: 900; font-size: 14px; line-height: 20px; }
 
-.main-grid { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; padding-top: 30px; padding-bottom: 30px; }
+.main-grid { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; padding-top: 30px; padding-bottom: 60px; }
 
 .article-grid { width: 74%; margin: 0; padding: 0; list-style: none; display: -ms-grid; display: grid; -ms-grid-columns: (minmax(30%, 1fr))[auto-fit]; grid-template-columns: repeat(auto-fit, minmax(30%, 1fr)); -ms-grid-rows: (minmax(200px, max-content))[3]; grid-template-rows: repeat(3, minmax(200px, -webkit-max-content)); grid-template-rows: repeat(3, minmax(200px, max-content)); grid-auto-rows: minmax(200px, -webkit-max-content); grid-auto-rows: minmax(200px, max-content); grid-gap: 30px; }
 
@@ -178,15 +178,15 @@ a { text-decoration: none; }
 
 .comments-counter { color: #939699; font-size: 12px; line-height: 15px; margin-left: 5px; }
 
-.sidebar-front-page { width: 23%; }
+.sidebar-front-page { width: 23%; margin: 0; padding: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
 
 .sidebar-front-page .widget-social-wrapper { padding: 10px 30px 20px; }
 
-.widget { background-color: #fff; border-radius: 10px; }
+.widget { margin: 0; background-color: #fff; border-radius: 10px; }
 
 .widget-title { padding: 20px 25px; border-bottom: 1px solid #D9DADB; font-size: 14px; line-height: 20px; font-family: "Lato Black", sans-serif; margin: 0; text-transform: uppercase; }
 
-.widget-downloader { background: #3BBDC4 url("../images/file.svg") no-repeat top 22px right 24px; border-radius: 10px; color: #ffffff; padding: 25px; padding-bottom: 65px; position: relative; margin-bottom: 0; }
+.widget-downloader { background: #3BBDC4 url("../images/file.svg") no-repeat top 22px right 24px; border-radius: 10px; color: #ffffff; padding: 25px; padding-bottom: 55px; position: relative; }
 
 .widget-downloader .widget-title { text-transform: none; margin-top: 0; font-family: Roboto Slab; font-style: normal; font-weight: bold; font-size: 16px; line-height: 25px; border: none; padding: 0; }
 
@@ -194,10 +194,22 @@ a { text-decoration: none; }
 
 .widget-downloader .widget-link-icon { margin-right: 10px; }
 
-.widget-downloader .widget-description { color: #C1F4F5; font-size: 14px; line-height: 20px; margin: 0; margin-top: 10px; }
+.widget-downloader .description { color: #C1F4F5; font-size: 14px; line-height: 20px; margin: 0; }
 
 .widget-social-wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
 .widget-social-icon { margin-left: 8px; margin-right: 8px; }
 
 .widget-social .widget-title { text-align: center; border: none; }
+
+.widget-socialnet { padding: 20px 25px 40px; }
+
+.widget-socialnet .widget-title { font-weight: bold; font-size: 20px; line-height: 25px; text-align: center; text-transform: none; border: none; margin-bottom: 10px; }
+
+.widget-socialnet .widget-link:not(:last-child) { margin-right: 10px; }
+
+.widget-socialnet .widget-link-icon { width: 42px; height: 42px; -o-object-fit: cover; object-fit: cover; border-radius: 50%; }
+
+.widget .tagcloud { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -ms-flex-wrap: wrap; flex-wrap: wrap; padding: 25px; padding-bottom: 30px; }
+
+.widget .tag-cloud-link { font-family: "Lato Black", sans-serif; text-transform: capitalize; margin-right: 10px; margin-bottom: 15px; line-height: 20px; color: #262D33; text-decoration: none; padding: 5px 15px; border: 1px solid #D9DADB; border-radius: 5px; cursor: pointer; }

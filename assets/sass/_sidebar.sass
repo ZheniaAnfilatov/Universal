@@ -1,10 +1,16 @@
 .sidebar
   &-front-page
     width: 23%
+    margin: 0
+    padding: 0
+    display: flex
+    flex-direction: column
+    justify-content: space-between
     .widget
       &-social-wrapper
         padding: 10px 30px 20px
 .widget
+  margin: 0
   background-color: #fff
   border-radius: 10px
   &-title
@@ -20,9 +26,8 @@
     border-radius: 10px
     color: #ffffff
     padding: 25px
-    padding-bottom: 65px
+    padding-bottom: 55px
     position: relative
-    margin-bottom: 0
     .widget
       &-title
         text-transform: none
@@ -53,12 +58,11 @@
         justify-content: center
         &-icon
           margin-right: 10px
-      &-description
-        color: #C1F4F5
-        font-size: 14px
-        line-height: 20px
-        margin: 0
-        margin-top: 10px
+    .description
+      color: #C1F4F5
+      font-size: 14px
+      line-height: 20px
+      margin: 0
   &-social
     &-wrapper
       display: flex
@@ -72,3 +76,41 @@
       &-title
         text-align: center
         border: none
+  &-socialnet
+    padding: 20px 25px 40px
+    .widget
+      &-title
+        font-weight: bold
+        font-size: 20px
+        line-height: 25px
+        text-align: center
+        text-transform: none
+        border: none
+        margin-bottom: 10px
+      &-link
+        &:not(:last-child)
+          margin-right: 10px
+        &-icon
+          width: 42px
+          height: 42px
+          object-fit: cover
+          border-radius: 50%
+  .tagcloud
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    flex-wrap: wrap
+    padding: 25px
+    padding-bottom: 30px
+  .tag-cloud-link
+    font-family: "Lato Black", sans-serif
+    text-transform: capitalize
+    margin-right: 10px
+    margin-bottom: 15px
+    line-height: 20px
+    color: #262D33
+    text-decoration: none
+    padding: 5px 15px
+    border: 1px solid #D9DADB
+    border-radius: 5px
+    cursor: pointer
