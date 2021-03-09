@@ -1,0 +1,79 @@
+.favourites
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  padding-bottom: 30px
+.digest
+  margin-top: 30px
+  list-style: none
+  padding: 0
+  margin: 0
+  background-color: #fff
+  border-radius: 10px
+  padding: 0 25px
+  &-wrapper
+    margin-bottom: 60px
+    width: 74%
+  &-item
+    display: flex
+    align-items: center
+    padding: 25px 0
+    &:not(:last-child)
+      border-bottom: 1px solid #D9DADB
+    &-permalink
+      text-decoration: none
+      flex-shrink: 0
+  &-thumb
+    width: 336px
+    height: 195px
+    object-fit: cover
+    margin-right: 25px
+  &-info
+    height: 185px
+    position: relative
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  &-title
+    font-family: Roboto Slab
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 25px
+    color: #262D33
+    margin-top: 15px
+    margin-bottom: 10px
+    max-width: 400px
+  &-excerpt
+    margin: 0 0 20px
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 20px
+    color: #4B5157
+  &-footer
+    display: flex
+    align-items: center
+  &-date, &-likes, &-comments
+    margin-right: 11px
+    color: #939699
+    display: flex
+    align-items: center
+  .category-link
+    font-style: normal
+    font-weight: 900
+    font-size: 12px
+    line-height: 15px
+    letter-spacing: 0.5px
+    text-transform: uppercase
+    color: #4592FF
+.bookmark
+  background-color: transparent
+  border: none
+  position: absolute
+  right: 0
+  top: 0
+  cursor: pointer
+  svg
+    fill: #BCBFC2

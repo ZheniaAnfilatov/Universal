@@ -200,7 +200,7 @@
                           </div>
                           <!-- comments -->
                           <div class="likes">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/images/heart.svg' ?>" alt="" class="comments-icon">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/images/heart-white.svg' ?>" alt="" class="comments-icon">
                             <span class="comments-counter"><?php comments_number( '0', '1', '%') ?></span>
                           </div>
                           <!-- /.likes -->
@@ -227,7 +227,7 @@
               <!-- /.article-grid-item -->
               <?php
               break;
-
+              // выводим осталные посты
             default: ?> 
               <li class="article-grid-item article-grid-item-default">
                 <a href="<?php echo the_permalink() ?>" class="article-grid-permalink">
@@ -255,5 +255,92 @@
     <?php get_sidebar(); ?>         
   </div>
   <!-- /.main-grid -->        
+</div>
+<!-- /.container -->
+
+<!-- выводим большой пост -->
+<?php		
+global $post;
+
+$query = new WP_Query( [
+	'posts_per_page' => 1,
+  'category_name' => 'investigation',
+] );
+
+if ( $query->have_posts() ) {
+	while ( $query->have_posts() ) {
+		$query->the_post();
+		?>
+		<section class="investigation" style="background: linear-gradient(0deg, rgba(64, 48, 61, 0.35), rgba(64, 48, 61, 0.35)), url(<?php echo get_the_post_thumbnail_url()?>) no-repeat center center; background-size: 100%">
+      <div class="container">
+        <h2 class="investigation-title"><?php the_title()?></h2>
+        <a href="<?php echo get_the_permalink() ?>" class="more">Читать статью</a>
+      </div>
+      <!-- container -->
+    </section>
+    <!-- section investigation -->
+		<?php 
+	}
+} else {
+	// Постов не найдено
+}
+
+wp_reset_postdata(); // Сбрасываем $post
+?>
+
+<div class="container">
+  <div class="digest-wrapper">
+    <ul class="digest">
+      <?php		
+      global $post;
+
+      $query = new WP_Query( [
+        'posts_per_page' => 6,
+        'offset' => 1,
+      ] );
+
+      if ( $query->have_posts() ) {
+        while ( $query->have_posts() ) {
+          $query->the_post();
+          ?>
+          <li class="digest-item">
+            <a href="<?php echo the_permalink() ?>" class="digest-item-permalink">
+              <img src="<?php echo get_the_post_thumbnail_url() ?>" alt="" class="digest-thumb">
+            </a>
+            <!-- digest-item-permalink -->
+            <a href="<?php echo the_permalink() ?>"class="digest-info">
+              <span class="category-link"><?php $category = get_the_category(); echo $category [0]->name; ?></span>
+              <h4 class="digest-title"><?php echo mb_strimwidth(get_the_title(), 0, 60, '...') ?></h4>
+              <p class="digest-excerpt"><?php echo mb_strimwidth(get_the_excerpt(), 0, 165, '...') ?></p>
+              <div class="digest-footer">
+                <span class="digest-date"><?php the_time( 'j F' ); ?></span>
+                <div class="comments digest-comments">
+                  <img src="<?php echo get_template_directory_uri() . '/assets/images/comment.svg' ?>" alt="" class="icon comments-icon">
+                  <span class="comments-counter"><?php comments_number( '0', '1', '%') ?></span>
+                </div>
+                <!-- comments -->
+                <div class="likes digest-likes">
+                  <img src="<?php echo get_template_directory_uri() . '/assets/images/heart.svg' ?>" alt="" class="icon comments-icon">
+                  <span class="comments-counter"><?php comments_number( '0', '1', '%') ?></span>
+                </div>
+                <!-- comments -->
+              </div>
+              <!-- /.digest-footer -->
+            </a>
+            <!-- digest-info -->
+          </li>
+          <!-- /.digest-item -->
+          <?php 
+        }
+      } else {
+        // Постов не найдено
+      }
+
+      wp_reset_postdata(); // Сбрасываем $post
+      ?>
+    </ul>
+    <!-- /.digest -->
+  </div>
+  <!-- /.digest-wrapper -->
 </div>
 <!-- /.container -->
