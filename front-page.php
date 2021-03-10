@@ -269,8 +269,8 @@
       ?>
     </ul>
     <!-- /.article-grid -->
-    <!-- подключаем сайдбар -->
-    <?php get_sidebar(); ?>         
+    <!-- подключаем верхний сайдбар -->
+    <?php get_sidebar('home-top'); ?>         
   </div>
   <!-- /.main-grid -->        
 </div>
@@ -282,7 +282,7 @@ global $post;
 
 $query = new WP_Query( [
 	'posts_per_page' => 1,
-  'category_name' => 'investigation',
+  'category_name' => 'investigations',
 ] );
 
 if ( $query->have_posts() ) {
@@ -307,66 +307,71 @@ wp_reset_postdata(); // Сбрасываем $post
 ?>
 
 <div class="container">
-  <div class="digest-wrapper">
-    <ul class="digest">
-      <?php		
-      global $post;
+  <div class="favourites">
+    <div class="digest-wrapper">
+      <ul class="digest">
+        <?php		
+        global $post;
 
-      $query = new WP_Query( [
-        'posts_per_page' => 6,
-        'offset' => 1,
-      ] );
+        $query = new WP_Query( [
+          'posts_per_page' => 6,
+          'offset' => 1,
+        ] );
 
-      if ( $query->have_posts() ) {
-        while ( $query->have_posts() ) {
-          $query->the_post();
-          ?>
-          <li class="digest-item">
-            <a href="<?php echo the_permalink() ?>" class="digest-item-permalink">
-              <img src="<?php echo get_the_post_thumbnail_url() ?>" alt="" class="digest-thumb">
-            </a>
-            <!-- digest-item-permalink -->
-            <a href="<?php echo the_permalink() ?>"class="digest-info">
-              <?php 
-                foreach (get_the_category() as $category) {
-                  printf(
-                    '<span class="category-link %s">%s</span>',
-                    esc_html( $category -> slug ),
-                    esc_html( $category -> name ),
-                  );
-                }
-                ?>
-              <h4 class="digest-title"><?php echo mb_strimwidth(get_the_title(), 0, 60, '...') ?></h4>
-              <p class="digest-excerpt"><?php echo mb_strimwidth(get_the_excerpt(), 0, 165, '...') ?></p>
-              <div class="digest-footer">
-                <span class="digest-date"><?php the_time( 'j F' ); ?></span>
-                <div class="comments digest-comments">
-                  <img src="<?php echo get_template_directory_uri() . '/assets/images/comment.svg' ?>" alt="" class="icon comments-icon">
-                  <span class="comments-counter"><?php comments_number( '0', '1', '%') ?></span>
+        if ( $query->have_posts() ) {
+          while ( $query->have_posts() ) {
+            $query->the_post();
+            ?>
+            <li class="digest-item">
+              <a href="<?php echo the_permalink() ?>" class="digest-item-permalink">
+                <img src="<?php echo get_the_post_thumbnail_url() ?>" alt="" class="digest-thumb">
+              </a>
+              <!-- digest-item-permalink -->
+              <a href="<?php echo the_permalink() ?>"class="digest-info">
+                <?php 
+                  foreach (get_the_category() as $category) {
+                    printf(
+                      '<span class="category-link %s">%s</span>',
+                      esc_html( $category -> slug ),
+                      esc_html( $category -> name ),
+                    );
+                  }
+                  ?>
+                <h4 class="digest-title"><?php echo mb_strimwidth(get_the_title(), 0, 60, '...') ?></h4>
+                <p class="digest-excerpt"><?php echo mb_strimwidth(get_the_excerpt(), 0, 165, '...') ?></p>
+                <div class="digest-footer">
+                  <span class="digest-date"><?php the_time( 'j F' ); ?></span>
+                  <div class="comments digest-comments">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/comment.svg' ?>" alt="" class="icon comments-icon">
+                    <span class="comments-counter"><?php comments_number( '0', '1', '%') ?></span>
+                  </div>
+                  <!-- comments -->
+                  <div class="likes digest-likes">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/heart.svg' ?>" alt="" class="icon comments-icon">
+                    <span class="comments-counter"><?php comments_number( '0', '1', '%') ?></span>
+                  </div>
+                  <!-- comments -->
                 </div>
-                <!-- comments -->
-                <div class="likes digest-likes">
-                  <img src="<?php echo get_template_directory_uri() . '/assets/images/heart.svg' ?>" alt="" class="icon comments-icon">
-                  <span class="comments-counter"><?php comments_number( '0', '1', '%') ?></span>
-                </div>
-                <!-- comments -->
-              </div>
-              <!-- /.digest-footer -->
-            </a>
-            <!-- digest-info -->
-          </li>
-          <!-- /.digest-item -->
-          <?php 
+                <!-- /.digest-footer -->
+              </a>
+              <!-- digest-info -->
+            </li>
+            <!-- /.digest-item -->
+            <?php 
+          }
+        } else {
+          // Постов не найдено
         }
-      } else {
-        // Постов не найдено
-      }
 
-      wp_reset_postdata(); // Сбрасываем $post
-      ?>
-    </ul>
-    <!-- /.digest -->
+        wp_reset_postdata(); // Сбрасываем $post
+        ?>
+      </ul>
+      <!-- /.digest -->
+    </div>
+    <!-- /.digest-wrapper -->
+    <!-- подключаем нижний сайдбар -->
+    <?php get_sidebar('home-bottom'); ?>   
   </div>
-  <!-- /.digest-wrapper -->
+  <!-- /.favourites -->
 </div>
 <!-- /.container -->

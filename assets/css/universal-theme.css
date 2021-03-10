@@ -188,6 +188,8 @@ a { text-decoration: none; }
 
 .comments-counter { color: #939699; font-size: 12px; line-height: 15px; margin-left: 5px; }
 
+body { counter-reset: section; }
+
 .sidebar-front-page { width: 23%; margin: 0; padding: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
 
 .sidebar-front-page .widget-social-wrapper { padding: 10px 30px 20px; }
@@ -219,6 +221,22 @@ a { text-decoration: none; }
 .widget-socialnet .widget-link:not(:last-child) { margin-right: 10px; }
 
 .widget-socialnet .widget-link-icon { width: 42px; height: 42px; -o-object-fit: cover; object-fit: cover; border-radius: 50%; }
+
+.widget-recent-posts-wrapper { padding: 0 25px 17px; }
+
+.widget-recent-posts a { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding-top: 17px; padding-bottom: 17px; position: relative; }
+
+.widget-recent-posts a:not(:last-child) { border-bottom: 1px solid #d9dadb; }
+
+.widget-recent-posts a::before { position: absolute; right: 0; color: #262d33; opacity: 0.08; font-size: 70px; line-height: 50px; font-family: "Lato Black", sans-serif; font-style: italic; counter-increment: section; content: counter(section); }
+
+.widget-recent-posts img { width: 60px; height: 60px; margin-right: 10px; }
+
+.widget-recent-posts h4 { font-style: normal; font-weight: normal; font-size: 14px; line-height: 20px; color: #4B5157; margin-top: 0; margin-bottom: 5px; }
+
+.widget-recent-posts span { font-style: normal; font-weight: normal; font-size: 12px; line-height: 15px; color: #939699; }
+
+.widget-recent-posts h5 { border-top: 1px solid #D9DADB; margin: 0; padding: 11px 0 14px; font-style: normal; font-weight: 900; font-size: 14px; line-height: 20px; text-align: center; color: #262D33; cursor: pointer; }
 
 .widget .tagcloud { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -ms-flex-wrap: wrap; flex-wrap: wrap; padding: 25px; padding-bottom: 30px; }
 
