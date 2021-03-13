@@ -82,15 +82,13 @@ a { text-decoration: none; }
 
 .category-link { font-size: 12px; line-height: 15px; color: #4592FF; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; }
 
-.category-link.javascript { color: #6E99AE; }
+.category-link.javascript, .category-link.career { color: #6E99AE; }
 
 .category-link.web-design, .category-link.articles { color: #FFA34D; }
 
 .category-link.css { color: #3BBDC4; }
 
 .category-link.html, .category-link.investigations { color: #AC8EE3; }
-
-.category-link.career { color: #4592FF; }
 
 .category-link.photoreport { color: #FF4F52; }
 
@@ -310,11 +308,11 @@ body { counter-reset: section; }
 
 .photo-report-title { font-family: Roboto Slab; font-size: 40px; line-height: 50px; }
 
-.other { width: 49%; }
+.other { width: 49%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-line-pack: justify; align-content: space-between; -ms-flex-wrap: wrap; flex-wrap: wrap; list-style: none; padding: 0; margin: 0; height: 570px; }
 
-.other-posts { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+.other-posts { width: 48%; height: 170px; }
 
-.other-post { width: 48%; padding: 25px 25px 30px; background-color: #fff; border-radius: 10px; overflow: hidden; margin-top: 20px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; text-decoration: none; min-height: 170px; }
+.other-post { padding: 25px 25px 30px; background-color: #fff; border-radius: 10px; overflow: hidden; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; text-decoration: none; height: 170px; }
 
 .other-post-title { margin: 0; font-family: Roboto Slab; font-style: normal; font-weight: bold; font-size: 16px; line-height: 25px; color: #262D33; }
 
@@ -322,7 +320,7 @@ body { counter-reset: section; }
 
 .other-post-date { color: #939699; margin-top: 10px; }
 
-.career-post { border-radius: 10px; overflow: hidden; background: #D1E2EB url(../images/career.png) no-repeat right top/cover; min-height: 370px; padding: 35px; }
+.career-post { border-radius: 10px; overflow: hidden; background: #D1E2EB url(../images/career.png) no-repeat right top/cover; height: 370px; padding: 35px; width: 100%; }
 
 .career-post-title { color: #262D33; font-family: Roboto Slab; font-style: normal; font-weight: bold; font-size: 25px; line-height: 30px; max-width: 245px; margin: 20px 0 15px; }
 
