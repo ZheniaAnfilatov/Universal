@@ -17,8 +17,7 @@
         } else {
             echo 'Universal';
         }
-      ?>
-      <?php
+
         wp_nav_menu( [
           'theme_location'  => 'header_menu',
           'container'       => 'nav', 

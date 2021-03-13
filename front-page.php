@@ -552,4 +552,4 @@ wp_reset_postdata(); // Сбрасываем $post
 </div>
 <!-- /.special -->
 
-<?php wp_footer(); ?>
+<?php get_footer(); ?>

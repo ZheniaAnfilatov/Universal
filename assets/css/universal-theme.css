@@ -325,3 +325,49 @@ body { counter-reset: section; }
 .career-post-title { color: #262D33; font-family: Roboto Slab; font-style: normal; font-weight: bold; font-size: 25px; line-height: 30px; max-width: 245px; margin: 20px 0 15px; }
 
 .career-post-excerpt { max-width: 214px; color: #4B5157; margin-bottom: 45px; }
+
+.footer { padding: 60px 0 55px; background-color: #fff; }
+
+.footer-menu { border-top: 3px solid #000; padding-right: 20px; -ms-flex-preferred-size: 100%; flex-basis: 100%; }
+
+.footer-menu:nth-child(1) { border-top: 3px solid #FF4F52; }
+
+.footer-menu:nth-child(2) { border-top: 3px solid #AC8EE3; }
+
+.footer-menu:nth-child(3) { border-top: 3px solid #4592FF; }
+
+.footer-menu:nth-child(4) { border-top: 3px solid #FFA34D; }
+
+.footer-menu:nth-child(5) { border-top: 3px solid #3DC47E; }
+
+.footer-menu:nth-child(6) { border-top: 3px solid #6E99AE; }
+
+.footer-menu-bar { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; padding-bottom: 60px; }
+
+.footer-menu-title { font-family: "Lato Black", sans-serif; font-weight: 900; font-size: 14px; line-height: 20px; margin-bottom: 25px; margin-top: 30px; }
+
+.footer-menu ul { padding: 0; margin: 0; list-style: none; }
+
+.footer-menu ul a { text-decoration: none; display: inline-block; color: #4B5157; margin: 0 0 15px; font-size: 14px; line-height: 20px; }
+
+.footer-info { padding: 30px 0; border-top: 1px solid #D9DADB; border-bottom: 1px solid #D9DADB; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.footer-info ul { padding: 0; margin: 0; list-style: none; }
+
+.footer-info ul a { color: #262D33; text-transform: uppercase; text-decoration: none; }
+
+.footer-nav { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-family: "Lato Black", sans-serif; }
+
+.footer-nav-wrapper { margin-right: auto; }
+
+.footer-text { max-width: 750px; }
+
+.footer-text-wrapper { color: #939699; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; padding-top: 40px; }
+
+.footer-text-wrapper p { margin-top: 0; margin-bottom: 25px; }
+
+.footer-social .widget-link { width: 40px; height: 40px; }
+
+.footer-social .widget-link:not(:last-child) { margin-right: 15px; }
+
+.footer-social .widget-link-icon { width: 40px; height: 40px; }
