@@ -79,7 +79,10 @@ body
         text-align: center
         border: none
   &-socialnet
-    padding: 20px 25px 40px
+    padding: 20px 25px
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
     .widget
       &-title
         font-weight: bold
@@ -88,13 +91,12 @@ body
         text-align: center
         text-transform: none
         border: none
-        margin-bottom: 10px
       &-link
         &:not(:last-child)
           margin-right: 10px
         &-icon
-          width: 42px
-          height: 42px
+          width: 40px
+          height: 40px
           object-fit: cover
           border-radius: 50%
   &-recent-posts

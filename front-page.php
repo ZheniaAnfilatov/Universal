@@ -153,7 +153,7 @@
       $query = new WP_Query( [
         // получаем 7 постов
         'posts_per_page' => 7,
-        'offset' => 4,
+        'offset' => 5,
       ] );
 
       // проверяем, есть ли посты
@@ -173,12 +173,12 @@
                   <a href="<?php echo the_permalink() ?>" class="article-grid-permalink">
                     <span class="category-name"><?php $category = get_the_category(); echo $category [0]->name; ?></span>
                     <h4 class="article-grid-title"><?php echo mb_strimwidth(get_the_title(), 0, 50, '...') ?></h4>
-                    <p class="article-grid-excerpt"><?php the_excerpt() ?></p>
+                    <p class="article-grid-excerpt"><?php echo mb_strimwidth(get_the_excerpt(), 0, 380, '...') ?></p>
                     <div class="article-grid-info">
                       <div class="author">
                       <?php $author_id = get_the_author_meta('ID'); ?>
                         <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="author-avatar">
-                        <span class="author-name"><strong><?php the_author() ?></strong>: <?php the_author_meta('description')?></span>
+                        <span class="author-name"><strong><?php the_author() ?>:</strong><?php the_author_meta('description')?></span>
                       </div>
                       <!-- author -->
                       <div class="comments">
@@ -261,7 +261,7 @@
                   echo get_template_directory_uri().'/assets/images/post-default.png';
                 }
                 ?>" alt="" class="article-thumb">
-                  <h4 class="article-grid-title"><?php echo mb_strimwidth(get_the_title(), 0, 50, '...') ?></h4>
+                  <h4 class="article-grid-title"><?php echo mb_strimwidth(get_the_title(), 0, 46, '...') ?></h4>
                 </a>
               </li>
               <!-- /.article-grid-item -->
@@ -518,7 +518,7 @@ wp_reset_postdata(); // Сбрасываем $post
                       ?>
                       <h3 class="career-post-title"><?php echo mb_strimwidth(get_the_title(), 0, 40, '...') ?></h3>
                       <p class="career-post-excerpt"><?php echo mb_strimwidth(get_the_excerpt(), 0, 85, '...') ?></p>
-                      <a href="<?php echo get_the_permalink() ?>" class="more">Читать статью</a>
+                      <a href="<?php echo get_the_permalink() ?>" class="more">Читать далее</a>
                     </li>
                     <!-- /.career-post -->  
                     <?php
@@ -528,7 +528,7 @@ wp_reset_postdata(); // Сбрасываем $post
                   default: ?> 
                     <li class="other-posts other-posts-default">
                       <a href="<?php echo the_permalink() ?>" class="other-post other-post-default">
-                        <h4 class="other-post-title"><?php echo mb_strimwidth(get_the_title(), 0, 22, '...') ?></h4>
+                        <h4 class="other-post-title"><?php echo mb_strimwidth(get_the_title(), 0, 18, '...') ?></h4>
                         <p class="other-post-excerpt"><?php echo mb_strimwidth(get_the_excerpt(), 0, 75, '...') ?></p>
                         <span class="other-post-date"><?php the_time( 'j F' ); ?></span>
                       </a>

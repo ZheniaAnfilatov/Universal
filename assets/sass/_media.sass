@@ -1,0 +1,307 @@
+@media screen and ( max-width: 1200px )
+  .container
+    max-width: 992px
+  .header
+    &-wrapper
+      flex-wrap: wrap
+    &-nav
+      order: 5
+      margin-top: 15px
+      width: 100%
+  .article
+    &-list
+      flex-wrap: wrap
+    &-item
+      width: 50%
+      &:not(:last-child)::before
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+        height: 1px
+        width: 70%
+        background-color: #4B5157
+        display: block
+    &-permalink
+      width: 70%
+  .widget
+    &-socialnet
+      padding: 20px 15px
+      .widget
+        &-title
+          font-size: 18px
+          padding-top: 0
+        &-link
+          &:not(:last-child)
+            margin-right: 7px
+          &-icon
+            width: 35px
+            height: 35px
+  .digest
+    &-info
+      height: auto
+    &-thumb
+      width: 270px
+  .other
+    &-post
+      padding: 15px 20px
+      &-title
+        font-size: 15px
+@media screen and ( max-width: 992px )
+  .container
+    max-width: 768px
+  .front-page
+    &-header
+      height: auto
+      padding-bottom: 40px
+  .article
+    &-list
+      margin-top: 40px
+    &-grid
+      width: 100%
+      margin-bottom: 30px
+  .article-grid-item-1 .article-grid-info
+    .author-name
+      width: auto
+  .main
+    &-grid
+      flex-direction: column
+      .sidebar
+        &-front-page
+          width: 100%
+          display: grid
+          grid-template-columns: 1fr 260px
+          grid-template-rows: 170px 120px
+          grid-column-gap: 30px
+          grid-row-gap: 15px
+  .widget
+    &_tag_cloud
+      grid-area: 1 / 1 / 3 / 2
+    &-downloader
+      grid-area: 1 / 2 / 2 / 3
+    &-socialnet
+      grid-area: 2 / 2 / 3 / 3
+      padding: 13px 15px
+      align-content: space-around
+      .widget
+        &-title
+          width: 100%
+          padding-bottom: 0
+  .investigation
+    padding: 40px 0 45px
+    &-title
+      font-size: 35px
+      line-height: 40px
+  .favourites
+    flex-direction: column
+    .sidebar
+      &-front-page
+        flex-direction: row
+        width: 100%
+  .digest
+    &-wrapper
+      width: 100%
+      margin-bottom: 30px
+  .widget
+    &-recent-posts
+      width: 100%
+      &-wrapper
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+  .recent
+    &-post-link
+      max-width: 265px
+  .special
+    &-grid
+      flex-direction: column
+  .photo
+    &-report
+      width: 100%
+      margin-bottom: 30px
+  .other
+    width: 100%
+  .footer
+    &-menu
+      flex-basis: 50%
+      &-bar
+        flex-wrap: wrap
+    &-nav
+      flex-wrap: wrap
+    &-social
+      .widget-link
+        &-icon
+          width: 35px
+          height: 35px
+    &-text
+      max-width: 520px
+@media screen and ( max-width: 768px )
+  .container
+    max-width: 570px
+  .header
+    &-wrapper
+      position: relative
+    &-nav
+      display: none
+      position: absolute
+      right: 0
+      top: 55px
+      width: calc(42% + 45px)
+      background-color: #fff
+      padding: 30px
+      z-index: 90
+      border-radius: 10px
+      box-shadow: 1px 1px 10px rgba(#262D33, 0.2)
+    &-menu
+      flex-direction: column
+      align-items: flex-start
+      a
+        color: #000
+      &-toggle
+        display: flex
+        width: 30px
+        height: 20px
+        align-items: center
+        justify-content: space-between
+        flex-direction: column
+        margin-left: 15px
+        span
+          width: 100%
+          height: 1px
+          background-color: #fff
+  .menu
+    &-item
+      &:not(:last-child)
+        margin-bottom: 15px
+  .search
+    &-form
+      margin-left: auto
+      width: 42%
+  .hero
+    flex-direction: column
+    .right
+      .post
+        padding: 15px 25px
+  .article
+    &-item
+      width: 100%
+      padding: 20px 60px
+    &-grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(3, minmax(200px, max-content))
+      &-item
+        &-1
+          grid-area: 1 / 1 / 2 / 4
+        &-2
+          grid-area: 2 / 1 / 4 / 2
+        &-3
+          grid-area: 2 / 2 / 4 / 4
+        &-default
+          display: none
+  .main
+    &-grid
+      .sidebar-front-page
+        display: flex
+  .widget-socialnet
+    padding: 25px 15px
+    .widget
+      &-title
+        margin-bottom: 15px
+      &-link-icon
+        width: 40px
+        height: 40px
+  .widget-socialnet .widget-link:not(:last-child)
+    margin-right: 15px
+  .digest
+    &-item
+      flex-direction: column
+    &-thumb
+      width: 100%
+  .footer
+    &-nav
+      .menu-item
+        flex-basis: 50%
+        margin-bottom: 15px
+    &-social
+      display: flex
+    &-text
+      max-width: 385px
+@media screen and ( max-width: 570px )
+  .container
+    max-width: 370px
+  .header-nav
+    top: 100px
+  .search
+    &-form
+      width: 100%
+      order: 5
+      margin-top: 15px
+  .hero .left
+    .post-title
+      font-size: 25px
+      line-height: 30px
+    .author
+      margin-bottom: 15px
+  .article
+    &-item
+      padding: 20px
+    &-grid
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(3, minmax(370px, min-content))
+      grid-column-gap: 0px
+      grid-row-gap: 30px
+      &-item
+        &-1
+          grid-area: 1 / 3
+        &-2
+          grid-area: 2 / 3
+        &-3
+          grid-area: 3 / 3
+  .investigation
+    &-title
+      font-size: 20px
+      line-height: 25px
+  .other
+    height: auto
+    .career-post
+      margin-bottom: 15px
+    &-posts
+      width: 100%
+      &:not(:last-child)
+        margin-bottom: 15px
+  .footer
+    &-menu
+      flex-basis: 100%
+    &-info
+      flex-direction: column
+      align-items: flex-start
+    &-nav
+      flex-direction: column
+      align-items: flex-start
+    &-social
+      margin: auto
+    &-text
+      margin-bottom: 10px
+    &-text-wrapper
+      flex-direction: column
+  .author-name
+    strong
+      display: none
+@media screen and ( max-width: 370px )
+  .container
+    max-width: 320px
+  .hero .left
+    padding: 50px 35px
+  .article-grid-item-1
+    padding: 20px 25px
+    .article-grid
+      &-title
+        width: 100%
+      &-excerpt
+        width: 100%
+        margin-bottom: 55px
+  .investigation
+    &-title
+      font-size: 18px
+      line-height: 20px

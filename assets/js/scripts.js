@@ -1,3 +1,4 @@
+// слайдер
 const swiper = new Swiper('.swiper-container', {
   // Optional parameters
   loop: true,
@@ -9,4 +10,11 @@ const swiper = new Swiper('.swiper-container', {
   pagination: {
     el: '.swiper-pagination',
   },
+});
+
+// меню
+let menuToggle = $('.header-menu-toggle');
+menuToggle.on('click', function (event){
+  event.preventDefault();
+  $('.header-nav').slideToggle(200);
 });
