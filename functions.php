@@ -117,8 +117,11 @@ class Downloader_Widget extends WP_Widget {
 		}
 		if ( ! empty( $link ) ) {
 			echo '<a target="blank" class="widget-link" href="' . $link . '">
-      <img class="widget-link-icon"  src=" ' . get_template_directory_uri( ). '/assets/images/download.svg" >
-      Скачать</a>';
+      				<svg width="20" height="20" class="widget-link-icon icon download-icon">
+                <use xlink:href="' . get_template_directory_uri() . '/assets/images/sprite.svg#download"></use>
+              </svg>
+							Скачать
+						</a>';
 		}
 		echo $args['after_widget'];
 	}
@@ -244,19 +247,31 @@ class Social_Widget extends WP_Widget {
 		}
 		if ( ! empty( $facebook ) ) {
 			echo '<a target="blank" class="widget-link" href="' . $facebook . '">
-      <img class="widget-link-icon"  src=" ' . get_template_directory_uri( ). '/assets/images/facebook.svg" ></a>';
+      				<svg class="widget-link-icon icon">
+                <use xlink:href="' . get_template_directory_uri() . '/assets/images/sprite.svg#facebook"></use>
+              </svg>
+						</a>';
 		}
 		if ( ! empty( $twitter ) ) {
 			echo '<a target="blank" class="widget-link" href="' . $twitter . '">
-      <img class="widget-link-icon"  src=" ' . get_template_directory_uri( ). '/assets/images/twitter.svg" ></a>';
+      				<svg class="widget-link-icon icon">
+                <use xlink:href="' . get_template_directory_uri() . '/assets/images/sprite.svg#twitter"></use>
+              </svg>
+						</a>';
 		}
 		if ( ! empty( $youtube ) ) {
 			echo '<a target="blank" class="widget-link" href="' . $youtube . '">
-      <img class="widget-link-icon"  src=" ' . get_template_directory_uri( ). '/assets/images/youtube.svg" ></a>';
+      				<svg class="widget-link-icon icon">
+                <use xlink:href="' . get_template_directory_uri() . '/assets/images/sprite.svg#youtube"></use>
+              </svg>
+						</a>';
 		}
 		if ( ! empty( $instagram ) ) {
 			echo '<a target="blank" class="widget-link" href="' . $instagram . '">
-      <img class="widget-link-icon"  src=" ' . get_template_directory_uri( ). '/assets/images/instagram.svg" ></a>';
+      				<svg class="widget-link-icon icon">
+                <use xlink:href="' . get_template_directory_uri() . '/assets/images/sprite.svg#instagram"></use>
+              </svg>
+						</a>';
 		}
 		echo $args['after_widget'];
 	}

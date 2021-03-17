@@ -218,7 +218,7 @@ body { counter-reset: section; }
 
 .widget-socialnet { padding: 20px 25px; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
-.widget-socialnet .widget-title { font-weight: bold; font-size: 20px; line-height: 25px; text-align: center; text-transform: none; border: none; }
+.widget-socialnet .widget-title { font-weight: bold; font-size: 20px; line-height: 25px; text-align: center; text-transform: none; border: none; width: 100%; }
 
 .widget-socialnet .widget-link:not(:last-child) { margin-right: 10px; }
 
@@ -243,6 +243,8 @@ body { counter-reset: section; }
 .widget .tagcloud { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -ms-flex-wrap: wrap; flex-wrap: wrap; padding: 25px; padding-bottom: 30px; }
 
 .widget .tag-cloud-link { font-family: "Lato Black", sans-serif; text-transform: capitalize; margin-right: 10px; margin-bottom: 15px; line-height: 20px; color: #262D33; text-decoration: none; padding: 5px 15px; border: 1px solid #D9DADB; border-radius: 5px; cursor: pointer; }
+
+.download-icon { fill: #fff; }
 
 .investigation { padding: 50px 0 55px; text-align: center; margin-bottom: 60px; }
 
