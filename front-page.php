@@ -178,7 +178,7 @@
                       <div class="author">
                       <?php $author_id = get_the_author_meta('ID'); ?>
                         <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="author-avatar">
-                        <span class="author-name"><strong><?php the_author() ?>:</strong><?php the_author_meta('description')?></span>
+                        <span class="author-name"><strong><?php the_author() ?>: </strong><?php the_author_meta('description')?></span>
                       </div>
                       <!-- author -->
                       <div class="comments">
