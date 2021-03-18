@@ -4,6 +4,8 @@
     color: #ffffff
     &-wrapper
       position: relative
+    &-title-wrapper
+      position: relative
     &-time
       display: flex
       align-items: center
@@ -78,12 +80,105 @@
     max-width: 750px
     margin-top: 52px
     margin-bottom: 30px
+  &-author
+    position: absolute
+    right: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    background-color: #fff
+    border-radius: 10px
+    overflow: hidden
+    border: 1px solid #D9DADB
+    min-width: 263px
+    &-info
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      color: #262D33
+      padding: 35px 25px 20px
+    &-avatar
+      width: 90px
+      height: 90px
+      border-radius: 50%
+      object-fit: cover
+    &-name
+      font-family: Roboto Slab, sans-serif
+      font-style: normal
+      font-weight: bold
+      font-size: 20px
+      line-height: 25px
+      margin-top: 15px
+      margin-bottom: 5px
+    &-rank
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 20px
+      color: #4B5157
+      margin-bottom: 15px
+    &-posts
+      font-family: "Lato Black", sans-serif
+      font-style: normal
+      font-weight: 900
+      font-size: 14px
+      line-height: 20px
+      margin-bottom: 20px
+    &-link
+      font-family: "Lato Black", sans-serif
+      font-style: normal
+      font-weight: 900
+      font-size: 14px
+      line-height: 20px
+      padding: 15px 25px
+      color: #262D33
+      border-top: 1px solid #D9DADB
+      width: 100%
+      text-align: center
+      &:visited
+        color: #262D33
+  &-content
+    padding-top: 60px
+    h2
+      font-style: normal
+      font-weight: bold
+      font-size: 25px
+      line-height: 30px
+      color: #262D33
+      margin: 45px 0 30px
+    ul
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 30px
+      color: #4B5157
+      list-style: none
+      padding: 0
+      margin: 0
+      &:first-child
+        max-width: 630px
+      &:first-letter
+        font-family: "Lato Black", sans-serif
+        font-size: 100px
+        line-height: 75px
+        color: #4592FF
+    p
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 30px
+      color: #4B5157
+      margin-bottom: 0
+      &:first-child
+        max-width: 630px
 .clock-icon
   margin-right: 5px
   opacity: 0.4
-.bookmark-icon
+.bookmark
   position: absolute
   right: 0
-  top: 70px
+  top: 10px
   fill: #fff
   opacity: 0.4

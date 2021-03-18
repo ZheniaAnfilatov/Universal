@@ -8,16 +8,23 @@
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<header class="header">
+<header class="header header-light">
   <div class="container">
     <div class="header-wrapper">
       <?php
-        if( has_custom_logo() ){
-            the_custom_logo();
-        } else {
-            echo 'Universal';
-        }
 
+      if( is_front_page() ){
+        echo "Это главная страница";
+      }
+      else {
+        if( has_custom_logo() ){
+          echo '<div class="logo">' . get_custom_logo() . 
+          '<a href="' . get_home_url() . '" class="logo-name">' . get_bloginfo( 'name' ) . '</a></div>'; 
+        } else {
+            echo '<span class="logo-name">' . get_bloginfo( 'name' ) . '</span></div>';
+        }
+      }
+ 
         wp_nav_menu( [
           'theme_location'  => 'header_menu',
           'container'       => 'nav', 

@@ -556,3 +556,9 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'homepage-thumb', 65, 65, true );
 	add_image_size( 'main-thumb', 778, 590, true );
 }
+
+// склоняем слова после числительных
+function plural_form($number, $after) {
+	$cases = array (2, 0, 1, 1, 1, 2);
+	echo $number.' '.$after[ ($number%100>4 && $number%100<20)? 2: $cases[min($number%10, 5)] ];
+}

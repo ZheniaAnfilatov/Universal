@@ -6,9 +6,15 @@
         <!-- /.footer-menu-bar -->
         <div class="footer-info">
           <?php
+          if( has_custom_logo() ){
+            echo '<div class="logo">' . get_custom_logo() . '</div>'; 
+          } else {
+            echo '<span class="logo-name">' . get_bloginfo( 'name' ) . '</span></div>';
+        }
           wp_nav_menu( [
             'theme_location'  => 'footer_menu',
             'container'       => 'nav', 
+            'container_class' => 'footer-nav-wrapper', 
             'menu_class'      => 'footer-nav', 
             'echo'            => true,
           ] );
