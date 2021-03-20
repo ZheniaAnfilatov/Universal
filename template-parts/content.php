@@ -142,13 +142,16 @@
   <!-- Содержимое поста -->
   <!-- Подвал поста -->
   <footer class="entry-footer">
-		<?php 
+		<div class="container">
+      <?php 
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'universal-example' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
 				printf( '<span class="tags-links">' . esc_html__( '%1$s', 'universal-example' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
     ?>
+    </div>
+    <!-- /.container -->
 	</footer>
   <!-- Подвал поста -->
 </article>
