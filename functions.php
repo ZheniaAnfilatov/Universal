@@ -33,8 +33,7 @@ add_action( 'after_setup_theme', 'universal_theme_setup' );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function universal_theme_widgets_init() {
-	register_sidebar(
-		array(
+	register_sidebar(	array(
 			'name'          => esc_html__( 'Сайдбар на главной сверху', 'universal-theme' ),
 			'id'            => 'main-sidebar-top',
 			'description'   => esc_html__( 'Добавьте виджеты сюда.', 'universal-theme' ),

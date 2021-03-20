@@ -405,7 +405,7 @@ wp_reset_postdata(); // Сбрасываем $post
     </div>
     <!-- /.digest-wrapper -->
     <!-- подключаем нижний сайдбар -->
-    <?php get_sidebar('home-bottom'); ?>   
+    <?php get_sidebar('home-bottom'); ?>
   </div>
   <!-- /.favourites -->
 </div>

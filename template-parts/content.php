@@ -144,14 +144,20 @@
   <footer class="entry-footer">
 		<div class="container">
       <?php 
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'universal-example' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( '', 'list item separator', 'universal-example' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
 				printf( '<span class="tags-links">' . esc_html__( '%1$s', 'universal-example' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
-    ?>
+      // ссылки на социальные сети
+      meks_ess_share();
+      ?>
     </div>
     <!-- /.container -->
+    <div class="content-post-wrapper">
+      <?php get_sidebar('post'); ?>
+    </div>
+    <!-- /.post-wrapper -->
 	</footer>
   <!-- Подвал поста -->
 </article>

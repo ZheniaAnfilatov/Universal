@@ -492,6 +492,22 @@ body { counter-reset: section; }
 
 .wp-block-columns { margin: 0; }
 
+.meks_ess { max-width: 623px; margin-top: 0; }
+
+.meks_ess_share_label { font-size: 25px; line-height: 30px; font-family: Roboto Slab; margin-top: 30px; margin-bottom: 25px; }
+
+.content-post { display: -webkit-box; display: -ms-flexbox; display: flex; padding: 0; margin: 0 auto; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+.content-post-wrapper { padding: 60px 113px 90px; margin-top: 60px; background-color: #F5F5F5; }
+
+.content-post-item { padding: 0; margin: 0; list-style: none; }
+
+.content-post-item-permalink img { border-radius: 10px; width: 263px; height: 180px; }
+
+.content-post-title { max-width: 263px; font-style: normal; font-weight: bold; font-size: 16px; line-height: 25px; color: #262D33; font-family: Roboto Slab; }
+
+.content-post-footer { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
 @media screen and (max-width: 1200px) { .container { max-width: 992px; }
   .header-wrapper { -ms-flex-wrap: wrap; flex-wrap: wrap; }
   .header-nav { -webkit-box-ordinal-group: 6; -ms-flex-order: 5; order: 5; margin-top: 15px; width: 100%; }
