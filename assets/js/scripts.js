@@ -18,3 +18,11 @@ menuToggle.on('click', function (event){
   event.preventDefault();
   $('.header-nav').slideToggle(200);
 });
+
+// перенос курсора
+let commentArea = $('.comments-add-button');
+commentArea.on('click', function (event){
+  event.preventDefault();
+  $(".comment-textarea").focus();
+});
+
