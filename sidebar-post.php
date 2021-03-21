@@ -4,8 +4,8 @@
 
         $query = new WP_Query( [
           'posts_per_page' => 4,
-          'category_name' => 'JavaScript',
-          'post__not_in' => array('201'),
+          'category__in' => array(2,6),
+          'post__not_in' => array($post -> ID),
         ] );
 
         if ( $query->have_posts() ) {
