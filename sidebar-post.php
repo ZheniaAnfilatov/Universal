@@ -2,9 +2,10 @@
         <?php		
         global $post;
 
+        $category = get_the_category();
         $query = new WP_Query( [
           'posts_per_page' => 4,
-          'category__in' => array(2,6),
+          'category__in' => array($current_cat_id = $category[0]->cat_ID),
           'post__not_in' => array($post -> ID),
         ] );
 
