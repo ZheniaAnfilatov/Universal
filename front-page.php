@@ -253,14 +253,14 @@
               <li class="article-grid-item article-grid-item-3">
                 <a href="<?php echo the_permalink() ?>" class="article-grid-permalink">
                   <img src="<?php 
-                //должно находится внутри цикла
-                if( has_post_thumbnail() ) {
-                  echo get_the_post_thumbnail_url();
-                }
-                else {
-                  echo get_template_directory_uri().'/assets/images/post-default.png';
-                }
-                ?>" alt="" class="article-thumb">
+                  //должно находится внутри цикла
+                  if( has_post_thumbnail() ) {
+                    echo get_the_post_thumbnail_url();
+                  }
+                  else {
+                    echo get_template_directory_uri().'/assets/images/post-default.png';
+                  }
+                  ?>" alt="" class="article-thumb">
                   <h4 class="article-grid-title"><?php echo mb_strimwidth(get_the_title(), 0, 46, '...') ?></h4>
                 </a>
               </li>
