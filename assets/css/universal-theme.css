@@ -602,7 +602,9 @@ body { counter-reset: section; }
 
 .post-list { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
-.post-card { background: #FFFFFF; border-radius: 10px; overflow: hidden; width: 23%; margin-bottom: 30px; }
+.post-list-wrapper .navigation { max-width: 848px; margin: 0 auto 70px; }
+
+.post-card { background: #FFFFFF; border-radius: 10px; overflow: hidden; width: 23%; }
 
 .post-card:not(:last-child) { margin-right: 2%; }
 
