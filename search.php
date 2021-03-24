@@ -66,7 +66,7 @@
     </div>
     <!-- digest-wrapper -->
     <!-- подключаем нижний сайдбар -->
-    <?php get_sidebar('home-bottom'); ?>
+    <?php get_sidebar('search'); ?>
   </div>
   <!-- /.favourites -->
 </div>
