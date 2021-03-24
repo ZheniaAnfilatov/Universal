@@ -30,7 +30,9 @@ a { text-decoration: none; }
 
 .logo { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
-.logo-name { color: #fff; font-family: Roboto Slab; margin-left: 10px; font-size: 24px; cursor: default; }
+.logo-name { color: #fff; font-family: Roboto Slab; margin-left: 10px; font-size: 24px; cursor: pointer; }
+
+.logo-name:visited { color: #4592FF; }
 
 .menu-item a { text-decoration: none; color: #fff; margin-right: 15px; margin-left: 15px; -webkit-transition: all 0.3s ease; transition: all 0.3s ease; }
 
