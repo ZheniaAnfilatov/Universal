@@ -536,6 +536,35 @@ function enqueue_universal_style() {
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_universal_style' );
 
+add_action( 'wp_enqueue_scripts', 'adminAjax_data', 99 );
+function adminAjax_data(){
+
+	wp_localize_script( 'jquery', 'adminAjax', 
+		array(
+			'url' => admin_url('admin-ajax.php')
+		)
+	);  
+
+}
+
+add_action('wp_ajax_contacts_form', 'ajax_form');
+add_action('wp_ajax_nopriv_contacts_form', 'ajax_form');
+function ajax_form() {
+	$contact_name = $_POST['contact_name'];
+	$contact_email = $_POST['contact_email'];
+	$contact_comment = $_POST['contact_comment'];
+	$message = 'Пользователь оставил свои данные: ' . $contact_name;
+
+	$headers = 'From: Женя Анфилатов <zhenia@gmail.com>' . "\r\n";
+	$sent_message = wp_mail('zheniaanfilatov@gmail.com', 'Новая заявка с сайта', $message, $headers);
+	if ($sent_message) {
+		echo 'Все получилось';
+	} else {
+		echo 'Ошибка';
+	}
+	wp_die();
+}
+
 // изменяем настройки облака тегов
 add_filter( 'widget_tag_cloud_args', 'edit_widget_tag_cloud_args' );
 function edit_widget_tag_cloud_args($args) {

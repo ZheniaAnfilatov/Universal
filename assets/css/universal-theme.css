@@ -96,7 +96,7 @@ a { text-decoration: none; }
 
 .hero .right .post-title { min-height: 40px; font-size: 14px; line-height: 20px; font-weight: 400; margin-bottom: 0; margin-top: 8px; color: #4B5157; }
 
-.more { display: inline-block; color: #fff; padding: 10px 20px; padding-right: 50px; border-radius: 20px; background: #4592FF; background-image: url("../images/arrow.svg"); background-repeat: no-repeat; background-position: center right 20px; outline: none; }
+.more { display: inline-block; color: #fff; padding: 10px 20px; padding-right: 50px; border-radius: 20px; background: #4592FF; background-image: url("../images/arrow.svg"); background-repeat: no-repeat; background-position: center right 20px; outline: none; font-size: 14px; }
 
 .more:hover, .more:focus, .more:visited { color: #fff; }
 
@@ -602,6 +602,8 @@ body { counter-reset: section; }
 
 .post-list { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
+.post-list-wrapper { margin-bottom: 40px; }
+
 .post-list-wrapper .navigation { max-width: 848px; margin: 0 auto 70px; }
 
 .post-card { background: #FFFFFF; border-radius: 10px; overflow: hidden; width: 23%; }
@@ -629,6 +631,32 @@ body { counter-reset: section; }
 .post-card .author-name { width: 100%; color: #4B5157; }
 
 .post-card .comments, .post-card .likes { margin-left: 10px; font-size: 12px; line-height: 15px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.section-dark { background: #262D33; color: #fff; padding: 50px 122px; }
+
+.page-title { font-family: Roboto Slab; font-style: normal; font-weight: bold; font-size: 40px; line-height: 50px; margin-top: 0; margin-bottom: 27px; }
+
+.page-text { font-style: normal; font-weight: bold; font-size: 18px; line-height: 30px; }
+
+.contacts-title { font-size: 18px; line-height: 30px; margin-bottom: 28px; }
+
+.contacts-wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
+
+.contacts-wrapper .left { margin-right: 80px; }
+
+.contacts-wrapper .right a, .contacts-wrapper .right address { text-decoration: none; color: rgba(255, 255, 255, 0.85); font-style: normal; margin-bottom: 15px; display: block; font-size: 14px; line-height: 20px; }
+
+.wpcf7-form, .contacts-form { max-width: 460px; }
+
+.wpcf7-form .contacts-input, .contacts-form .contacts-input { width: 100%; padding: 10px 15px; font-size: 14px; line-height: 20px; color: #939699; margin-bottom: 10px; height: 40px; border-radius: 5px; }
+
+.wpcf7-form textarea, .contacts-form textarea { width: 100%; padding: 10px 15px; font-size: 14px; line-height: 20px; color: #939699; margin-bottom: 20px; height: 120px; resize: none; border-radius: 5px; }
+
+.wpcf7-form button, .contacts-form button { border: none; cursor: pointer; }
+
+.wpcf7-form .wpcf7-submit, .contacts-form .wpcf7-submit { display: inline-block; color: #fff; padding: 10px 20px; padding-right: 50px; border-radius: 20px; background: #4592FF; background-image: url("../images/arrow.svg"); background-repeat: no-repeat; background-position: center right 20px; outline: none; font-size: 14px; border: none; cursor: pointer; }
+
+.wpcf7-form .wpcf7-submit:hover, .wpcf7-form .wpcf7-submit:focus, .wpcf7-form .wpcf7-submit:visited, .contacts-form .wpcf7-submit:hover, .contacts-form .wpcf7-submit:focus, .contacts-form .wpcf7-submit:visited { color: #fff; }
 
 @media screen and (max-width: 1200px) { .container { max-width: 992px; }
   .header-wrapper { -ms-flex-wrap: wrap; flex-wrap: wrap; }
