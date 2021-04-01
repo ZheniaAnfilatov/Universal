@@ -636,7 +636,7 @@ body { counter-reset: section; }
 
 .page-title { font-family: Roboto Slab; font-style: normal; font-weight: bold; font-size: 40px; line-height: 50px; margin-top: 0; margin-bottom: 27px; }
 
-.page-text { font-style: normal; font-weight: bold; font-size: 18px; line-height: 30px; }
+.page-subtitle { font-style: normal; font-weight: bold; font-size: 18px; line-height: 30px; }
 
 .contacts-title { font-size: 18px; line-height: 30px; margin-bottom: 28px; }
 
@@ -644,7 +644,7 @@ body { counter-reset: section; }
 
 .contacts-wrapper .left { margin-right: 80px; }
 
-.contacts-wrapper .right a, .contacts-wrapper .right address { text-decoration: none; color: rgba(255, 255, 255, 0.85); font-style: normal; margin-bottom: 15px; display: block; font-size: 14px; line-height: 20px; }
+.contacts-wrapper .right a, .contacts-wrapper .right address { text-decoration: none; color: rgba(255, 255, 255, 0.85); font-style: normal; margin-bottom: 15px; display: block; font-size: 14px; line-height: 20px; max-width: 263px; }
 
 .wpcf7-form, .contacts-form { max-width: 460px; }
 

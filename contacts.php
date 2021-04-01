@@ -11,7 +11,7 @@ get_header();
     <?php the_title('<h1 class="page-title">', '</h1>', true); ?>
     <div class="contacts-wrapper">
       <div class="left">
-        <p class="page-text">Через форму обратной связи</p>
+        <p class="page-subtitle">Через форму обратной связи</p>
         <form action="#" class="contacts-form" method="POST">
           <input name="contact_name" type="text" class="input contacts-input" placeholder="Ваше имя">
           <input name="contact_email" type="email" class="input contacts-input" placeholder="Ваш Email">
@@ -22,7 +22,12 @@ get_header();
         <!-- /.contacts-form -->
       </div>
       <!-- /.left -->
-      <div class="right"></div>
+      <div class="right">
+      <p class="page-subtitle">Или по этим контактам</p>
+        <a href="mailto: <?php the_field('email', get_the_ID()); ?>" class="rigth-link"><?php the_field('email', get_the_ID()); ?></a>
+        <address class="rigth-link"><?php the_field('address', get_the_ID()); ?></address>
+        <a href="tel: <?php the_field('phone', get_the_ID()); ?>" class="rigth-link"><?php the_field('phone', get_the_ID()); ?></a>
+      </div>
       <!-- /.right -->
     </div>
     <!-- /.contacts-wrapper -->
