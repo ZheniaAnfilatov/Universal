@@ -24,9 +24,9 @@ get_header();
       <!-- /.left -->
       <div class="right">
       <p class="page-subtitle">Или по этим контактам</p>
-        <a href="mailto: <?php the_field('email', get_the_ID()); ?>" class="rigth-link"><?php the_field('email', get_the_ID()); ?></a>
-        <address class="rigth-link"><?php the_field('address', get_the_ID()); ?></address>
-        <a href="tel: <?php the_field('phone', get_the_ID()); ?>" class="rigth-link"><?php the_field('phone', get_the_ID()); ?></a>
+        <a href="mailto: <?php the_field('email'); ?>" class="rigth-link"><?php the_field('email'); ?></a>
+        <address class="rigth-link"><?php the_field('address'); ?></address>
+        <a href="tel: <?php the_field('phone'); ?>" class="rigth-link"><?php the_field('phone'); ?></a>
       </div>
       <!-- /.right -->
     </div>
