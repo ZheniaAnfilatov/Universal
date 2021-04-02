@@ -658,6 +658,8 @@ body { counter-reset: section; }
 
 .wpcf7-form .wpcf7-submit:hover, .wpcf7-form .wpcf7-submit:focus, .wpcf7-form .wpcf7-submit:visited, .contacts-form .wpcf7-submit:hover, .contacts-form .wpcf7-submit:focus, .contacts-form .wpcf7-submit:visited { color: #fff; }
 
+.lesson-header { padding: 80px 0; color: #fff; }
+
 @media screen and (max-width: 1200px) { .container { max-width: 992px; }
   .header-wrapper { -ms-flex-wrap: wrap; flex-wrap: wrap; }
   .header-nav { -webkit-box-ordinal-group: 6; -ms-flex-order: 5; order: 5; margin-top: 15px; width: 100%; }
