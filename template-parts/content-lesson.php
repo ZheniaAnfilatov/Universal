@@ -4,16 +4,27 @@
 		<div class="container">
       <div class="post-header-wrapper">
         <div class="video">
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/7c52uFUu1TQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <?php 
-            $tmp = explode('?v=', get_field('video_link'));
-            echo end ($tmp);
-            
+            $tmp1 = explode( '//', get_field('video_link'));
+            $tmp2 = substr(end ($tmp1),0,8);
+            if ($tmp2 === 'youtu.be') {
+              ?>
+              <iframe width="100%" height="450px" src="https://www.youtube.com/embed/<?php
+                $tmp = explode( '/', get_field('video_link'));
+                echo end($tmp);
+                ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <?php 
+            }elseif ($tmp2 === 'vimeo.co'){
+              ?>
+              <iframe src="https://player.vimeo.com/video/<?php 
+                $tmp = explode( '/',get_field('video_link'));
+                echo end($tmp);
+                ?>" width="100%" height="450px" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+              <?php
+            }
           ?>
         </div>
         <!-- /.video -->
-        <!-- /.post-header-nav -->
-        <!-- post-header-title-wrapper -->
         <div class="post-header-info">
           <div class="post-header-time">
             <svg width="15" height="15" class="icon clock-icon">
@@ -29,4 +40,4 @@
     <!-- /.container -->
 	</header>
   <!-- Шапка поста -->
-</article>
+</article>s
